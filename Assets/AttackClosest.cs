@@ -5,6 +5,8 @@ using UnityEngine;
 public class AttackClosest : MonoBehaviour
 {
     public AutoChessEntity bug;
+    private float attackTimer;
+    private AutoChessEntity lastOtherBug;
 
     // Start is called before the first frame update
     void Start()
@@ -15,14 +17,25 @@ public class AttackClosest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        attackTimer -= Time.deltaTime;
+
+        if(attackTimer <= 0){
+            if(lastOtherBug){
+                lastOtherBug.receiveAttack(bug.attack());
+            }
+            attackTimer = bug.bugStats.attackSpeed;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if(bug){
         AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
+        lastOtherBug = otherBug;
         bug.bugStats.movementSpeed = 100;
         bug.receiveAttack(1f);
-        Debug.Log("ATTACK!" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
+        
+        // Start attack timer
+        attackTimer = bug.bugStats.attackSpeed;
         }
     }
 
