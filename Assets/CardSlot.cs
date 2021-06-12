@@ -35,14 +35,18 @@ public class CardSlot : MonoBehaviour, IDropHandler
 
     public void SetCardInSlot(CardSlot slot, Card card)
     {
+        if (card.currentSlot != null && card.currentSlot.cardInSlot != null) {
+            card.currentSlot.cardInSlot = null;
+        }
+
         card.GetComponent<RectTransform>().anchoredPosition = slot.GetComponent<RectTransform>().anchoredPosition;
-        cardInSlot = card;
+        slot.cardInSlot = card;
         card.currentSlot = slot;
     }
 
     private void SwitchCards(Card oldCard, Card newCard)
     {
-        SetCardInSlot(oldCard.currentSlot, oldCard);
+        SetCardInSlot(newCard.currentSlot, oldCard);
         SetCardInSlot(this, newCard);
     }
 }
