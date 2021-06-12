@@ -26,8 +26,6 @@ public class GotoClosest : MonoBehaviour
             Vector3 otherPosition = transform.position;
             Vector3 difference = otherPosition - position;
 
-            body.SetRotation(Vector3.Angle(difference, Vector3.back));
-
             if (Vector3.Distance(position, otherPosition) > stopDistance)
             {
                 body.velocity = difference.normalized * speed * Time.deltaTime;
