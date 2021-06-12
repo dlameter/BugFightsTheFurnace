@@ -14,9 +14,12 @@ public class GotoClosest : MonoBehaviour
 
     void FixedUpdate()
     {
-        Transform closest = targetingClass.targetingFunction(new List<Collider2D>(colliding).ConvertAll<Transform>(Collider2DToTransform), this.GetComponentInParent<Rigidbody2D>());
-        MoveTo(closest);
-        LookAt(closest);
+        if (colliding.Count > 0)
+        {
+            Transform closest = targetingClass.targetingFunction(new List<Collider2D>(colliding).ConvertAll<Transform>(Collider2DToTransform), this.GetComponentInParent<Rigidbody2D>());
+            MoveTo(closest);
+            LookAt(closest);
+        }
     }
 
     void MoveTo(Transform transform)

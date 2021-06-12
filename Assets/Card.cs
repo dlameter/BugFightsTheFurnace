@@ -21,7 +21,6 @@ public class Card : MonoBehaviour, IDropHandler
 
     public void OnDrop()
     {
-        Debug.Log("Card dropped");
         if (!ChangedSlot())
         {
             ReturnToPosition();

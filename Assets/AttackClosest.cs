@@ -19,7 +19,7 @@ public class AttackClosest : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        BugStats otherStats = other.GetComponent<BugStats>();
-        Debug.Log("ATTACK!" + other.name + " from " + this.name + " other stats movement " + otherStats.movementSpeed);
+        AutoChessEntity chessEntity = other.GetComponent<AutoChessEntity>();
+        Debug.Log("ATTACK!" + other.name + " from " + this.name + " other stats movement " + chessEntity.bugStats.movementSpeed);
     }
 }
