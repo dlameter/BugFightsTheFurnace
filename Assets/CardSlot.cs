@@ -5,7 +5,12 @@ using UnityEngine.EventSystems;
 
 public class CardSlot : MonoBehaviour, IDropHandler
 {
-    public BugStats bugInSlot;
+    public Card cardInSlot;
+
+    void Start()
+    {
+        cardInSlot.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -13,16 +18,31 @@ public class CardSlot : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null)
         {
             Card card = eventData.pointerDrag.GetComponent<Card>();
+
             if (card != null)
             {
-                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-                SetBugInSlot(card.bugStats);
+                if (cardInSlot)
+                {
+                    SwitchCards(cardInSlot, card);
+                }
+                else
+                {
+                    SetCardInSlot(this, card);
+                }
             }
         }
     }
 
-    public void SetBugInSlot(BugStats bugStats)
+    public void SetCardInSlot(CardSlot slot, Card card)
     {
-        bugInSlot = bugStats;
+        card.GetComponent<RectTransform>().anchoredPosition = slot.GetComponent<RectTransform>().anchoredPosition;
+        cardInSlot = card;
+        card.currentSlot = slot;
+    }
+
+    private void SwitchCards(Card oldCard, Card newCard)
+    {
+        SetCardInSlot(oldCard.currentSlot, oldCard);
+        SetCardInSlot(this, newCard);
     }
 }
