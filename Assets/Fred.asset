@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fred
   image: {fileID: -3665364186405681620, guid: d263a36edc3a30e40b188636620e35b7, type: 3}
+  bugPrefab: {fileID: 6942497532725339854, guid: 5b9ac22554eaf63409cdc366ad3acf4f, type: 3}
   movementSpeed: 80
   attackPower: 0
   attackSpeed: 0

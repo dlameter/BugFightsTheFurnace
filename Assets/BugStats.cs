@@ -8,6 +8,7 @@ public class BugStats : ScriptableObject
     public new string name;
     public Sprite image;
 
+    public GameObject bugPrefab;
     public float movementSpeed;
     public float attackPower;
     public float attackSpeed;

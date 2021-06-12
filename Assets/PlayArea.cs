@@ -5,9 +5,16 @@ using UnityEngine.EventSystems;
 
 public class PlayArea : MonoBehaviour, IDropHandler
 {
+    public GameObject prefab;
+
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("DROP IN PLAY AREA");
-        GameObject bug = Instantiate(Resources.Load("Prefabs/AutoChessEntity"), eventData.pointerCurrentRaycast.worldPosition, Quaternion.identity) as GameObject;
+        Card card = eventData.pointerDrag.GetComponent<Card>();
+        if (card != null) {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(eventData.position);
+            mousePos.z = 0;
+            GameObject bug = Instantiate(card.bugStats.bugPrefab, mousePos, Quaternion.identity) as GameObject;
+            Destroy(card.gameObject);
+        }
     }
 }

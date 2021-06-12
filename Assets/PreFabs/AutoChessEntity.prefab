@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e74302a7057a5044b00e93012a02c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chessEntity: {fileID: 8568409954703312420}
+  bugStats: {fileID: 0}
 --- !u!1 &5507051969587784377
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 15
 --- !u!114 &26846391785394394
 MonoBehaviour:
   m_ObjectHideFlags: 0

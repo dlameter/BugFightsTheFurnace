@@ -324,5 +324,3 @@ MonoBehaviour:
   bugStats: {fileID: 0}
   image: {fileID: 7315308086707363455}
   bugName: {fileID: 8852508491156956590}
-  previousPosition: {fileID: 5806519344275591950}
-  currentSlot: {fileID: 0}
