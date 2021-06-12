@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GotoClosest : MonoBehaviour
 {
-    public float speed;
+    public BugStats bugStats;
     public float stopDistance;
     public bool friend;
 
@@ -28,7 +28,7 @@ public class GotoClosest : MonoBehaviour
 
             if (Vector3.Distance(position, otherPosition) > stopDistance)
             {
-                body.velocity = difference.normalized * speed * Time.deltaTime;
+                body.velocity = difference.normalized * bugStats.movementSpeed * Time.deltaTime;
             }
             else
             {
