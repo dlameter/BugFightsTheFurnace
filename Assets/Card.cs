@@ -61,7 +61,6 @@ public class Card : MonoBehaviour, IDropHandler
         if (currentSlot != null)
         {
             ((IDropHandler)currentSlot).OnDrop(eventData);
-
         }
     }
 }
