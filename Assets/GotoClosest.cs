@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GotoClosest : MonoBehaviour
 {
+    public Rigidbody2D body;
     public BugStats bugStats;
     public float stopDistance;
     public bool friend;
@@ -19,31 +20,24 @@ public class GotoClosest : MonoBehaviour
 
     void MoveTo(Transform transform)
     {
-        Rigidbody2D body = this.GetComponent<Rigidbody2D>();
-        if (body)
-        {
-            Vector3 position = body.position;
-            Vector3 otherPosition = transform.position;
-            Vector3 difference = otherPosition - position;
+        Vector3 position = body.position;
+        Vector3 otherPosition = transform.position;
+        Vector3 difference = otherPosition - position;
 
-            if (Vector3.Distance(position, otherPosition) > stopDistance)
-            {
-                body.velocity = difference.normalized * bugStats.movementSpeed * Time.deltaTime;
-            }
-            else
-            {
-                body.velocity = Vector2.zero;
-            }
+        if (Vector3.Distance(position, otherPosition) > stopDistance)
+        {
+            body.velocity = difference.normalized * bugStats.movementSpeed * Time.deltaTime;
+        }
+        else
+        {
+            body.velocity = Vector2.zero;
         }
     }
 
-    void LookAt(Transform transform) {
-        Rigidbody2D body = this.GetComponent<Rigidbody2D>();
-        if (body)
-        {
-            float angle = Vector3.SignedAngle(Vector3.up, body.transform.position - transform.position, Vector3.forward);
-            body.MoveRotation(angle);
-        }
+    void LookAt(Transform transform)
+    {
+        float angle = Vector3.SignedAngle(Vector3.up, body.transform.position - transform.position, Vector3.forward);
+        body.MoveRotation(angle);
     }
 
     Transform Collider2DToTransform(Collider2D collider)
@@ -53,8 +47,7 @@ public class GotoClosest : MonoBehaviour
 
     Transform GetClosestTransform(List<Transform> transforms)
     {
-        Rigidbody2D body = this.GetComponent<Rigidbody2D>();
-        if (!body || transforms.Count == 0)
+        if (transforms.Count == 0)
         {
             return null;
         }

@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8848986594618128671}
   - component: {fileID: 8733787371204428}
   - component: {fileID: 6196234376263129904}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,11 +153,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6900818207899342285}
   - component: {fileID: 4535307058645299256}
-  - component: {fileID: 6624027538323652222}
   - component: {fileID: 8018980244147492842}
-  - component: {fileID: 52458720509025482}
   - component: {fileID: 7781595732219782882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AutoChessEntity
   m_TagString: Bug
   m_Icon: {fileID: 0}
@@ -177,6 +175,7 @@ Transform:
   m_Children:
   - {fileID: 2779365023819790423}
   - {fileID: 8848986594618128671}
+  - {fileID: 4121007785413747954}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -196,21 +195,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6624027538323652222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507051969587784377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e818dd26f1887304698b9ca033141637, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bugStats: {fileID: 7781595732219782882}
-  stopDistance: 1.2
-  friend: 0
 --- !u!50 &8018980244147492842
 Rigidbody2D:
   serializedVersion: 4
@@ -232,22 +216,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &52458720509025482
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507051969587784377}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 10
 --- !u!114 &7781595732219782882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,3 +236,67 @@ MonoBehaviour:
   dodge: 0
   specialCooldownLength: 0
   bugName: 
+--- !u!1 &5705025950255595623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4121007785413747954}
+  - component: {fileID: 8509093055946884611}
+  - component: {fileID: 26846391785394394}
+  m_Layer: 6
+  m_Name: ClosestBugTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4121007785413747954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705025950255595623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.08011067, y: 0.14461887, z: -6.168366}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6900818207899342285}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &8509093055946884611
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705025950255595623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 10
+--- !u!114 &26846391785394394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705025950255595623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e818dd26f1887304698b9ca033141637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 8018980244147492842}
+  bugStats: {fileID: 7781595732219782882}
+  stopDistance: 1.2
+  friend: 0

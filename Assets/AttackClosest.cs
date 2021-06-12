@@ -19,6 +19,6 @@ public class AttackClosest : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("ATTACK!");
+        Debug.Log("ATTACK!" + other.name + " from " + this.name);
     }
 }
