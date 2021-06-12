@@ -13,8 +13,8 @@ public class GotoClosest : MonoBehaviour
     void FixedUpdate()
     {
         Transform closest = GetClosestTransform(new List<Collider2D>(colliding).ConvertAll<Transform>(Collider2DToTransform));
-        Debug.Log(closest);
         MoveTo(closest);
+        LookAt(closest);
     }
 
     void MoveTo(Transform transform)
@@ -26,8 +26,6 @@ public class GotoClosest : MonoBehaviour
             Vector3 otherPosition = transform.position;
             Vector3 difference = otherPosition - position;
 
-            body.SetRotation(Vector3.Angle(difference, Vector3.back));
-
             if (Vector3.Distance(position, otherPosition) > stopDistance)
             {
                 body.velocity = difference.normalized * speed * Time.deltaTime;
@@ -36,6 +34,15 @@ public class GotoClosest : MonoBehaviour
             {
                 body.velocity = Vector2.zero;
             }
+        }
+    }
+
+    void LookAt(Transform transform) {
+        Rigidbody2D body = this.GetComponent<Rigidbody2D>();
+        if (body)
+        {
+            float angle = Vector3.SignedAngle(Vector3.up, body.transform.position - transform.position, Vector3.forward);
+            body.MoveRotation(angle);
         }
     }
 
