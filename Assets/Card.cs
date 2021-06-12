@@ -64,9 +64,6 @@ public class Card : MonoBehaviour, IDropHandler
     }
 
     private void SetPreviousPosition(RectTransform newPosition) {
-        // if (previousPosition != null) {
-        //     Destroy(previousPosition.parent);
-        // }
         previousPosition = newPosition.anchoredPosition;
     }
 }
