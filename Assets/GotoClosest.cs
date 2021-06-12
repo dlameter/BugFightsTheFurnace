@@ -8,7 +8,7 @@ public class GotoClosest : MonoBehaviour
     public BugStats bugStats;
     public float stopDistance;
     public TargetingInterface targetingClass;
-    public bool friend;
+    public bool enemy;
 
     private HashSet<Collider2D> colliding = new HashSet<Collider2D>();
 
@@ -16,9 +16,14 @@ public class GotoClosest : MonoBehaviour
     {
         if (colliding.Count > 0)
         {
-            Transform closest = targetingClass.targetingFunction(new List<Collider2D>(colliding).FindAll((colliders) => {
-            return colliders!=null;
-        }).ConvertAll<Transform>(Collider2DToTransform), this.GetComponentInParent<Rigidbody2D>());
+            Transform closest = targetingClass.targetingFunction(
+                new List<Collider2D>(colliding).FindAll((colliders) =>
+                {
+                    return colliders != null;
+                })
+                .ConvertAll<Transform>(Collider2DToTransform),
+                this.GetComponentInParent<Rigidbody2D>()
+            );
             MoveTo(closest);
             LookAt(closest);
         }
@@ -26,7 +31,8 @@ public class GotoClosest : MonoBehaviour
 
     void MoveTo(Transform transform)
     {
-        if(!transform || !body){
+        if (!transform || !body)
+        {
             body.velocity = Vector2.zero;
             return;
         }
@@ -46,7 +52,8 @@ public class GotoClosest : MonoBehaviour
 
     void LookAt(Transform transform)
     {
-        if(!transform || !body){
+        if (!transform || !body)
+        {
             return;
         }
         float angle = Vector3.SignedAngle(Vector3.up, body.transform.position - transform.position, Vector3.forward);
@@ -60,7 +67,8 @@ public class GotoClosest : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Bug")
+        GotoClosest gotoClosestOther = other.GetComponentInChildren<GotoClosest>();
+        if (other.gameObject.tag == "Bug" && gotoClosestOther != null && gotoClosestOther.enemy != enemy) 
         {
             this.colliding.Add(other);
         }

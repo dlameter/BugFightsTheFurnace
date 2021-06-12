@@ -27,8 +27,10 @@ public class Deck : MonoBehaviour, IBeginDragHandler, IPointerDownHandler
 
     private GameObject BuildCard(BugStats bugStats)
     {
-        GameObject cardObject = Instantiate(cardPrefab, this.GetComponent<RectTransform>().anchoredPosition, Quaternion.identity, cardParent.transform) as GameObject;
+        Vector3 anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+        GameObject cardObject = Instantiate(cardPrefab, anchoredPosition, Quaternion.identity, cardParent.transform) as GameObject;
         cardObject.GetComponent<Card>().bugStats = bugStats;
+        cardObject.GetComponent<RectTransform>().anchoredPosition = anchoredPosition;
         return cardObject;
     }
 }
