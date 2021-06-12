@@ -15,4 +15,8 @@ public class BugStats : ScriptableObject
     public float health;
     public float dodge;
     public float specialCooldownLength;
+
+    public new string ToString() {
+        return name + ": movement speed = " + movementSpeed;
+    }
 }

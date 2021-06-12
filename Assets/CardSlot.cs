@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class CardSlot : MonoBehaviour, IDropHandler
 {
     public Card cardInSlot;
+    public UnityEvent<Card> onCardAdded;
+    public UnityEvent<Card> onCardRemoved;
 
     void Start()
     {
-        SetCardInSlot(this, cardInSlot);
+        if (cardInSlot != null)
+        {
+            SetCardInSlot(this, cardInSlot);
+        }
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -17,17 +23,19 @@ public class CardSlot : MonoBehaviour, IDropHandler
         Debug.Log("ON DROP");
         if (eventData.pointerDrag != null)
         {
-            Card card = eventData.pointerDrag.GetComponent<Card>();
+            Card newCard = eventData.pointerDrag.GetComponent<Card>();
 
-            if (card != null)
+            if (newCard != null)
             {
                 if (cardInSlot)
                 {
-                    SwitchCards(cardInSlot, card);
+                    onCardRemoved.Invoke(cardInSlot);
+                    SwitchCards(cardInSlot, newCard);
+                    onCardAdded.Invoke(cardInSlot);
                 }
                 else
                 {
-                    SetCardInSlot(this, card);
+                    SetCardInSlot(this, newCard);
                 }
             }
         }
@@ -36,7 +44,8 @@ public class CardSlot : MonoBehaviour, IDropHandler
     public void SetCardInSlot(CardSlot slot, Card card)
     {
         CardSlot currentSlot = card.GetSlot();
-        if (currentSlot != null && currentSlot.cardInSlot != null && currentSlot.cardInSlot == card) {
+        if (currentSlot != null && currentSlot.cardInSlot != null && currentSlot.cardInSlot == card)
+        {
             currentSlot.cardInSlot = null;
         }
 
