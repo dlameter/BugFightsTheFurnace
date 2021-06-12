@@ -247,8 +247,9 @@ GameObject:
   - component: {fileID: 4121007785413747954}
   - component: {fileID: 8509093055946884611}
   - component: {fileID: 26846391785394394}
+  - component: {fileID: 8662408990167814676}
   m_Layer: 6
-  m_Name: ClosestBugTrigger
+  m_Name: FindBugTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,4 +300,17 @@ MonoBehaviour:
   body: {fileID: 8018980244147492842}
   bugStats: {fileID: 7781595732219782882}
   stopDistance: 1.2
+  targetingClass: {fileID: 8662408990167814676}
   friend: 0
+--- !u!114 &8662408990167814676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705025950255595623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ce710ecadbfd04f9df2b2029898ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

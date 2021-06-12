@@ -7,13 +7,14 @@ public class GotoClosest : MonoBehaviour
     public Rigidbody2D body;
     public BugStats bugStats;
     public float stopDistance;
+    public TargetingInterface targetingClass;
     public bool friend;
 
     private HashSet<Collider2D> colliding = new HashSet<Collider2D>();
 
     void FixedUpdate()
     {
-        Transform closest = GetClosestTransform(new List<Collider2D>(colliding).ConvertAll<Transform>(Collider2DToTransform));
+        Transform closest = targetingClass.targetingFunction(new List<Collider2D>(colliding).ConvertAll<Transform>(Collider2DToTransform), this.GetComponentInParent<Rigidbody2D>());
         MoveTo(closest);
         LookAt(closest);
     }
@@ -43,25 +44,6 @@ public class GotoClosest : MonoBehaviour
     Transform Collider2DToTransform(Collider2D collider)
     {
         return collider.transform;
-    }
-
-    Transform GetClosestTransform(List<Transform> transforms)
-    {
-        if (transforms.Count == 0)
-        {
-            return null;
-        }
-        Transform closest = transforms[0];
-
-        foreach (Transform transform in transforms)
-        {
-            if (Vector3.Distance(body.transform.position, transform.position) < Vector3.Distance(body.transform.position, closest.position))
-            {
-                closest = transform;
-            }
-        }
-
-        return closest;
     }
 
     void OnTriggerEnter2D(Collider2D other)
