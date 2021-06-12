@@ -14,6 +14,7 @@ public class BugStats : ScriptableObject
     public float attackSpeed;
     public float defense;
     public float health;
+    public float hitpoints;
     public float dodge;
     public float specialCooldownLength;
 

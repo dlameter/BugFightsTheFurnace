@@ -16,7 +16,9 @@ public class GotoClosest : MonoBehaviour
     {
         if (colliding.Count > 0)
         {
-            Transform closest = targetingClass.targetingFunction(new List<Collider2D>(colliding).ConvertAll<Transform>(Collider2DToTransform), this.GetComponentInParent<Rigidbody2D>());
+            Transform closest = targetingClass.targetingFunction(new List<Collider2D>(colliding).FindAll((colliders) => {
+            return colliders!=null;
+        }).ConvertAll<Transform>(Collider2DToTransform), this.GetComponentInParent<Rigidbody2D>());
             MoveTo(closest);
             LookAt(closest);
         }
@@ -24,6 +26,9 @@ public class GotoClosest : MonoBehaviour
 
     void MoveTo(Transform transform)
     {
+        if(!transform || !body){
+            return;
+        }
         Vector3 position = body.position;
         Vector3 otherPosition = transform.position;
         Vector3 difference = otherPosition - position;
@@ -40,6 +45,9 @@ public class GotoClosest : MonoBehaviour
 
     void LookAt(Transform transform)
     {
+        if(!transform || !body){
+            return;
+        }
         float angle = Vector3.SignedAngle(Vector3.up, body.transform.position - transform.position, Vector3.forward);
         body.MoveRotation(angle);
     }

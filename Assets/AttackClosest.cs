@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackClosest : MonoBehaviour
 {
-    public BugStats bugStats;
+    public AutoChessEntity bug;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,23 @@ public class AttackClosest : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        AutoChessEntity chessEntity = other.GetComponent<AutoChessEntity>();
-        Debug.Log("ATTACK!" + other.name + " from " + this.name + " other stats movement " + chessEntity.bugStats.movementSpeed);
+        if(bug){
+        AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
+        bug.bugStats.movementSpeed = 100;
+        bug.receiveAttack(1f);
+        Debug.Log("ATTACK!" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
+        }
+    }
+
+    void OnTriggerStay2d(Collider2D other){
+        Debug.Log("STAY BOY" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
+        AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
+        bug.bugStats.movementSpeed = 100;
+        bug.receiveAttack(1f);
+        Debug.Log("STAY BOY" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
+    }
+
+    void OnTriggerLeave2d(Collider2D other){
+        bug.bugStats.movementSpeed = 10;
     }
 }
