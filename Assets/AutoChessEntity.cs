@@ -8,6 +8,7 @@ public class AutoChessEntity : MonoBehaviour
     public BugStats bugStats;
     public SpriteRenderer bugRenderer;
     public GotoClosest gotoClosest;
+    public bool enemy;
 
     void Start() {
         bugRenderer.sprite = bugStats.image;

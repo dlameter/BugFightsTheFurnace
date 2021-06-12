@@ -231,7 +231,7 @@ MonoBehaviour:
   bugStats: {fileID: 11400000, guid: 567d32a2386105c4aadd4b154b9c90d8, type: 2}
   bugRenderer: {fileID: 8683343065029930111}
   gotoClosest: {fileID: 26846391785394394}
-  attackClosest: {fileID: 0}
+  enemy: 0
 --- !u!1 &5705025950255595623
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,10 +294,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 8018980244147492842}
+  autoChessEntity: {fileID: 8568409954703312420}
   bugStats: {fileID: 0}
   stopDistance: 1.2
   targetingClass: {fileID: 8662408990167814676}
-  friend: 0
 --- !u!114 &8662408990167814676
 MonoBehaviour:
   m_ObjectHideFlags: 0
