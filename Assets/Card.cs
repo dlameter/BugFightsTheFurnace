@@ -9,14 +9,14 @@ public class Card : MonoBehaviour, IDropHandler
     public BugStats bugStats;
     public Image image;
     public Text bugName;
-    private RectTransform previousPosition;
+    private Vector2 previousPosition;
     private CardSlot currentSlot;
 
     void Start()
     {
         bugName.text = bugStats.name;
         image.sprite = bugStats.image;
-        previousPosition = Instantiate(GetComponent<RectTransform>());
+        SetPreviousPosition(GetComponent<RectTransform>());
     }
 
     public void OnDrop()
@@ -28,20 +28,9 @@ public class Card : MonoBehaviour, IDropHandler
         }
     }
 
-    public void SetSlot(CardSlot newSlot)
-    {
-        currentSlot = newSlot;
-        previousPosition = newSlot.GetComponent<RectTransform>();
-    }
-
-    public CardSlot GetSlot()
-    {
-        return currentSlot;
-    }
-
     public void ReturnToPosition()
     {
-        GetComponent<RectTransform>().anchoredPosition = previousPosition.anchoredPosition;
+        GetComponent<RectTransform>().anchoredPosition = previousPosition;
     }
 
     public bool ChangedSlot()
@@ -52,7 +41,7 @@ public class Card : MonoBehaviour, IDropHandler
         }
         else
         {
-            return !previousPosition.Equals(currentSlot.GetComponent<RectTransform>());
+            return !previousPosition.Equals(currentSlot.GetComponent<RectTransform>().anchoredPosition);
         }
     }
 
@@ -62,5 +51,23 @@ public class Card : MonoBehaviour, IDropHandler
         {
             ((IDropHandler)currentSlot).OnDrop(eventData);
         }
+    }
+
+    public void SetSlot(CardSlot newSlot)
+    {
+        currentSlot = newSlot;
+        SetPreviousPosition(newSlot.GetComponent<RectTransform>());
+    }
+
+    public CardSlot GetSlot()
+    {
+        return currentSlot;
+    }
+
+    private void SetPreviousPosition(RectTransform newPosition) {
+        // if (previousPosition != null) {
+        //     Destroy(previousPosition.parent);
+        // }
+        previousPosition = newPosition.anchoredPosition;
     }
 }
