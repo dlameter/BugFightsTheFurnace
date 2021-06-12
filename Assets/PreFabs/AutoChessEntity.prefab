@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2631103260818236658, guid: d263a36edc3a30e40b188636620e35b7, type: 3}
-  m_Color: {r: 0.5497383, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e74302a7057a5044b00e93012a02c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bugStats: {fileID: 7781595732219782882}
+  bugStats: {fileID: 0}
 --- !u!1 &5507051969587784377
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 6900818207899342285}
   - component: {fileID: 4535307058645299256}
   - component: {fileID: 8018980244147492842}
-  - component: {fileID: 7781595732219782882}
+  - component: {fileID: 8568409954703312420}
   m_Layer: 7
   m_Name: AutoChessEntity
   m_TagString: Bug
@@ -216,7 +216,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7781595732219782882
+--- !u!114 &8568409954703312420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,17 +225,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5507051969587784377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
+  m_Script: {fileID: 11500000, guid: a1f3289e7b322b649a1992b396695c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 50
-  attackPower: 0
-  attackSpeed: 0
-  defense: 0
-  health: 0
-  dodge: 0
-  specialCooldownLength: 0
-  bugName: 
+  bugStats: {fileID: 11400000, guid: 567d32a2386105c4aadd4b154b9c90d8, type: 2}
+  bugRenderer: {fileID: 8683343065029930111}
+  gotoClosest: {fileID: 26846391785394394}
 --- !u!1 &5705025950255595623
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 8018980244147492842}
-  bugStats: {fileID: 7781595732219782882}
+  bugStats: {fileID: 0}
   stopDistance: 1.2
   targetingClass: {fileID: 8662408990167814676}
   friend: 0

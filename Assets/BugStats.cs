@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BugStats : MonoBehaviour
+[CreateAssetMenu(fileName = "New Bug", menuName = "Bug")]
+public class BugStats : ScriptableObject
 {
+    public new string name;
+    public Sprite image;
+
     public float movementSpeed;
     public float attackPower;
     public float attackSpeed;
@@ -11,17 +15,4 @@ public class BugStats : MonoBehaviour
     public float health;
     public float dodge;
     public float specialCooldownLength;
-    public string bugName;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

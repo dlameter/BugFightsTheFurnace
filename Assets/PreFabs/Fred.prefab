@@ -99,10 +99,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8683343065029930111, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 8568409954703312420, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
+      propertyPath: bugStats
       value: 
-      objectReference: {fileID: -3665364186405681620, guid: d263a36edc3a30e40b188636620e35b7, type: 3}
+      objectReference: {fileID: 11400000, guid: bdcb18d2e74ac8c4d80b4755cc16bce8, type: 2}
     m_RemovedComponents:
     - {fileID: 8662408990167814676, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
