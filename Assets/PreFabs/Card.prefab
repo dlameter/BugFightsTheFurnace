@@ -282,6 +282,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1252dddc9bd5c5e448896bb85674bb48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onDrop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 211651955963531360}
+        m_TargetAssemblyTypeName: Card, Assembly-CSharp
+        m_MethodName: OnDrop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!225 &1542999516498485652
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -309,3 +324,5 @@ MonoBehaviour:
   bugStats: {fileID: 0}
   image: {fileID: 7315308086707363455}
   bugName: {fileID: 8852508491156956590}
+  previousPosition: {fileID: 5806519344275591950}
+  currentSlot: {fileID: 0}
