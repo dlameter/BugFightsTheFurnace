@@ -21,9 +21,14 @@ public class AllEnemiesDead : MonoBehaviour
 
     void DecrementCounter()
     {
-        enemiesLeft -= 1;
+        // enemiesLeft -= 1;
 
-        if (enemiesLeft <= 0)
+        enemies = enemies.FindAll((enemy) => {
+            return enemy != null && !enemy.isDead();
+        });
+
+        // if (enemiesLeft <= 0)
+        if (enemies.Count <= 0)
         {
             onWin.Invoke();
         }

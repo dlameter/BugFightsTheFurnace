@@ -54,5 +54,9 @@ public class AutoChessEntity : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    public bool isDead() {
+        return hp <= 0;
+    }
+
     public void specialAttack() { }
 }
