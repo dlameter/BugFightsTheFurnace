@@ -80,7 +80,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -123,6 +123,54 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -130,10 +178,10 @@ TextureImporter:
       name: MaggotWalk_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 97
-        width: 14
-        height: 12
+        x: 0
+        y: 86
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,10 +199,10 @@ TextureImporter:
       name: MaggotWalk_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 97
-        width: 13
-        height: 11
+        x: 32
+        y: 86
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +220,10 @@ TextureImporter:
       name: MaggotWalk_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 97
-        width: 12
-        height: 10
+        x: 64
+        y: 86
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +241,10 @@ TextureImporter:
       name: MaggotWalk_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 97
-        width: 13
-        height: 11
+        x: 96
+        y: 86
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +262,10 @@ TextureImporter:
       name: MaggotWalk_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 65
-        width: 21
-        height: 12
+        x: 0
+        y: 54
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +283,10 @@ TextureImporter:
       name: MaggotWalk_5
       rect:
         serializedVersion: 2
-        x: 39
-        y: 65
-        width: 23
-        height: 11
+        x: 32
+        y: 54
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +304,10 @@ TextureImporter:
       name: MaggotWalk_6
       rect:
         serializedVersion: 2
-        x: 70
-        y: 65
-        width: 25
-        height: 10
+        x: 64
+        y: 54
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,10 +325,10 @@ TextureImporter:
       name: MaggotWalk_7
       rect:
         serializedVersion: 2
-        x: 103
-        y: 65
-        width: 23
-        height: 11
+        x: 96
+        y: 54
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,10 +346,10 @@ TextureImporter:
       name: MaggotWalk_8
       rect:
         serializedVersion: 2
-        x: 3
-        y: 33
-        width: 21
-        height: 12
+        x: 0
+        y: 22
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +367,10 @@ TextureImporter:
       name: MaggotWalk_9
       rect:
         serializedVersion: 2
-        x: 34
-        y: 33
-        width: 23
-        height: 11
+        x: 32
+        y: 22
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +388,10 @@ TextureImporter:
       name: MaggotWalk_10
       rect:
         serializedVersion: 2
-        x: 65
-        y: 33
-        width: 25
-        height: 10
+        x: 64
+        y: 22
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +409,10 @@ TextureImporter:
       name: MaggotWalk_11
       rect:
         serializedVersion: 2
-        x: 98
-        y: 33
-        width: 23
-        height: 11
+        x: 96
+        y: 22
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,90 +422,6 @@ TextureImporter:
       bones: []
       spriteID: b5aae1911629d4ae0800000000000000
       internalID: -1563432549896770981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaggotWalk_12
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 1
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a55dcc4f493eceb00800000000000000
-      internalID: 859311857822651738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaggotWalk_13
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 1
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0190bdb2e84036c90800000000000000
-      internalID: -7177888372430796528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaggotWalk_14
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 1
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5208a9e0213f344f0800000000000000
-      internalID: -845565046135554011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaggotWalk_15
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 1
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08ccdb9c29c0539a0800000000000000
-      internalID: -6254078682944648064
       vertices: []
       indices: 
       edges: []
