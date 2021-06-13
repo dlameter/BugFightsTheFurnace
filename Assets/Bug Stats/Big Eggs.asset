@@ -16,8 +16,8 @@ MonoBehaviour:
   bugPrefab: {fileID: 1246916366361389033, guid: e463b3643a2f76943bb5326cb5da1104, type: 3}
   movementSpeed: 0
   attackPower: 4
-  attackSpeed: 2
-  defense: 2
+  attackSpeed: 1.5
+  defense: 1.5
   health: 30
   hitpoints: 30
   dodge: 0
