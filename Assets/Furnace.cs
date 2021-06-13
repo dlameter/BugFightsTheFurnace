@@ -96,6 +96,24 @@ public class Furnace : MonoBehaviour
         recipe[0] = bugList[4];
         recipe[1] = bugList[6];
         recipes.Add(bugList[16], recipe);
+
+        // Black Maggot
+        recipe = new BugStats[2];
+        recipe[0] = bugList[6];
+        recipe[1] = bugList[0];
+        recipes.Add(bugList[17], recipe);
+
+        // Green Maggot
+        recipe = new BugStats[2];
+        recipe[0] = bugList[6];
+        recipe[1] = bugList[2];
+        recipes.Add(bugList[18], recipe);
+
+        // Healthy Maggot
+        recipe = new BugStats[2];
+        recipe[0] = bugList[6];
+        recipe[1] = bugList[4];
+        recipes.Add(bugList[19], recipe);
     }
 
     // Update is called once per frame

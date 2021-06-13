@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
   m_Name: Black Maggot
   m_EditorClassIdentifier: 
-  name: Maggot
-  image: {fileID: 0}
-  bugPrefab: {fileID: 0}
+  image: {fileID: 4595244571018344865, guid: a4ddb855599a43a43aaf4347cc3ef3eb, type: 3}
+  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
   movementSpeed: 0
   attackPower: 0
   attackSpeed: 0
