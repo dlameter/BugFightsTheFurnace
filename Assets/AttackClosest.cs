@@ -39,7 +39,7 @@ public class AttackClosest : MonoBehaviour
         {
             if (attackTimer <= 0) {
                 Debug.Log(other.name + " got hit by " + bug.name);
-                attackTimer = bug.bugStats.attackSpeed * 1;
+                attackTimer = 1.0f / bug.bugStats.attackSpeed;
                 otherBug.receiveAttack(bug.bugStats.attackPower);
             }
         }
