@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class AutoChessEntity : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class AutoChessEntity : MonoBehaviour
     public AttackClosest attackClosest;
     public bool enemy;
     private float hp;
+
+    public UnityEvent onDead;
 
     void Start() {
         bugRenderer.sprite = bugStats.image;
@@ -47,7 +50,12 @@ public class AutoChessEntity : MonoBehaviour
     public void die()
     {
         Debug.Log("Dead: " + name);
+        onDead.Invoke();
         Destroy(this.gameObject);
+    }
+
+    public bool isDead() {
+        return hp <= 0;
     }
 
     public void specialAttack() { }
