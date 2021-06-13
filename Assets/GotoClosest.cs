@@ -5,6 +5,7 @@ using UnityEngine;
 public class GotoClosest : MonoBehaviour
 {
     public Rigidbody2D body;
+    public AutoChessEntity chessEntity;
     public BugStats bugStats;
     public float stopDistance;
     public TargetingInterface targetingClass;
@@ -60,7 +61,9 @@ public class GotoClosest : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Bug")
+        AutoChessEntity otherChessEntity = other.GetComponent<AutoChessEntity>();
+
+        if (other.gameObject.tag == "Bug" && otherChessEntity != null && otherChessEntity.enemy != chessEntity.enemy)
         {
             this.colliding.Add(other);
         }
