@@ -27,7 +27,7 @@ public class GotoClosest : MonoBehaviour
     void MoveTo(Transform transform)
     {
         if(!transform || !body){
-            body.velocity = Vector2.zero;
+            if(body)body.velocity = Vector2.zero;
             return;
         }
         Vector3 position = body.position;
