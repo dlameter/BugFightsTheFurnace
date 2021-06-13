@@ -71,6 +71,12 @@ public class CardSlot : MonoBehaviour, IDropHandler
         card.SetSlot(slot);
     }
 
+    public void DestoryCard() {
+        Card card = cardInSlot;
+        SetCardInSlot(this, null);
+        Destroy(card.gameObject);
+    }
+
     private void SwitchCards(Card oldCard, Card newCard)
     {
         SetCardInSlot(newCard.GetSlot(), oldCard);

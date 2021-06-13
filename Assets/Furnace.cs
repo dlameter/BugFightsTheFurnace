@@ -46,6 +46,9 @@ public class Furnace : MonoBehaviour
                     GameObject newCard = Instantiate(cardPrefab, Vector3.zero, Quaternion.identity, cardParent.transform) as GameObject;
                     newCard.GetComponent<Card>().bugStats = result;
                     outputSlot.SetCardInSlot(outputSlot, newCard.GetComponent<Card>());
+
+                    firstSlot.DestoryCard();
+                    secondSlot.DestoryCard();
                     return;
                 }
             }
