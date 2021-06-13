@@ -28,23 +28,26 @@ public class AttackClosest : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(bug){
-        AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
-        lastOtherBug = otherBug;
-        bug.bugStats.movementSpeed = 100;
-        bug.receiveAttack(1f);
+        // if(bug){
+        // AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
+        // lastOtherBug = otherBug;
+        // bug.bugStats.movementSpeed = 100;
+        // bug.receiveAttack(1f);
         
-        // Start attack timer
-        attackTimer = bug.bugStats.attackSpeed;
-        }
+        // // Start attack timer
+        // attackTimer = bug.bugStats.attackSpeed;
+        // }
     }
 
-    void OnTriggerStay2d(Collider2D other){
+    void OnTriggerStay2D(Collider2D other){
         Debug.Log("STAY BOY" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
         AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
-        bug.bugStats.movementSpeed = 100;
-        bug.receiveAttack(1f);
-        Debug.Log("STAY BOY" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
+        if (otherBug != null && otherBug.enemy != bug.enemy)
+        {
+            bug.bugStats.movementSpeed = 100;
+            bug.receiveAttack(1f);
+            Debug.Log("STAY BOY" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
+        }
     }
 
     void OnTriggerLeave2d(Collider2D other){
