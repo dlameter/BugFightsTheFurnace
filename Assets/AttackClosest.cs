@@ -43,7 +43,6 @@ public class AttackClosest : MonoBehaviour
         AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
         if (otherBug != null && otherBug.enemy != bug.enemy)
         {
-            bug.bugStats.movementSpeed = 100;
             bug.receiveAttack(1f);
             Debug.Log("STAY BOY" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
         }
