@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class StartGame : MonoBehaviour
 {
+    void Start(){
+        PauseAllAutoChessEntities();
+    }
     public void PauseAllAutoChessEntities()
     {
+        Time.timeScale = 0;
         List<AutoChessEntity> autoChessEntities = new List<AutoChessEntity>(Object.FindObjectsOfType<AutoChessEntity>());
 
         foreach (AutoChessEntity entity in autoChessEntities)
@@ -15,8 +19,9 @@ public class StartGame : MonoBehaviour
         }
     }
     
-    public void UnpauseAllAutoChessEntities()
+    public static void UnpauseAllAutoChessEntities()
     {
+        Time.timeScale = 1;
         List<AutoChessEntity> autoChessEntities = new List<AutoChessEntity>(Object.FindObjectsOfType<AutoChessEntity>());
 
         foreach (AutoChessEntity entity in autoChessEntities)

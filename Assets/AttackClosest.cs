@@ -37,6 +37,7 @@ public class AttackClosest : MonoBehaviour
         AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
         if (otherBug != null && otherBug.tag == "Bug" && otherBug.enemy != bug.enemy)
         {
+            StartGame.UnpauseAllAutoChessEntities();
             if (attackTimer <= 0) {
                 Debug.Log(other.name + " got hit by " + bug.name);
                 attackTimer = 1.0f / bug.bugStats.attackSpeed;
