@@ -142,10 +142,10 @@ TextureImporter:
       name: Mantis_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 34
-        width: 24
-        height: 25
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: Mantis_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 33
-        width: 26
-        height: 25
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: Mantis_2
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1
-        width: 26
-        height: 25
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: Mantis_3
       rect:
         serializedVersion: 2
-        x: 38
+        x: 32
         y: 0
-        width: 21
-        height: 27
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
