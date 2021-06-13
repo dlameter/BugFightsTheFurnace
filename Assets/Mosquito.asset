@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
+  m_Name: Mosquito
+  m_EditorClassIdentifier: 
+  name: Mosquito
+  image: {fileID: 2631103260818236658, guid: b92f00e6982c04d2db3770594c821fb4, type: 3}
+  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
+  movementSpeed: 10
+  attackPower: 1
+  attackSpeed: 1
+  defense: 0
+  health: 5
+  hitpoints: 5
+  dodge: 10
+  specialCooldownLength: 0
