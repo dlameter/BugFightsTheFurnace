@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: BigMosquito
   image: {fileID: 7397011066581695075, guid: d3e623a92880a1a4abd79615a0c510cf, type: 3}
-  bugPrefab: {fileID: 5692508453216053751, guid: 9e2db2a9da0a6db4a8790050692b94ae, type: 3}
+  bugPrefab: {fileID: 1246916366361389033, guid: e463b3643a2f76943bb5326cb5da1104, type: 3}
   movementSpeed: 50
   attackPower: 5
   attackSpeed: 1

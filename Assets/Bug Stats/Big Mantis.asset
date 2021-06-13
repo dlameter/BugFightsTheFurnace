@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Big Mantis
   image: {fileID: -7227660872210392997, guid: 07bbe7540c1a0f145bc03f60b826358c, type: 3}
-  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
+  bugPrefab: {fileID: 1246916366361389033, guid: e463b3643a2f76943bb5326cb5da1104, type: 3}
   movementSpeed: 10
   attackPower: 8
   attackSpeed: 0.5

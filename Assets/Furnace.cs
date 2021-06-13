@@ -42,6 +42,24 @@ public class Furnace : MonoBehaviour
         recipe[0] = bugList[6];
         recipe[1] = bugList[6];
         recipes.Add(bugList[7], recipe);
+
+        // Green Mosquito
+        recipe = new BugStats[2];
+        recipe[0] = bugList[0];
+        recipe[1] = bugList[2];
+        recipes.Add(bugList[8], recipe);
+
+        // Healthy Mosquito
+        recipe = new BugStats[2];
+        recipe[0] = bugList[0];
+        recipe[1] = bugList[4];
+        recipes.Add(bugList[9], recipe);
+
+        // Orange Mosquito
+        recipe = new BugStats[2];
+        recipe[0] = bugList[0];
+        recipe[1] = bugList[6];
+        recipes.Add(bugList[10], recipe);
     }
 
     // Update is called once per frame

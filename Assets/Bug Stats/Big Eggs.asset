@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Big Eggs
   image: {fileID: 21300000, guid: 8b7b4acfd9775c141ba5a4842b652782, type: 3}
-  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
+  bugPrefab: {fileID: 1246916366361389033, guid: e463b3643a2f76943bb5326cb5da1104, type: 3}
   movementSpeed: 0
   attackPower: 4
   attackSpeed: 2
