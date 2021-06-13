@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
+  m_Name: Orange Eggs
+  m_EditorClassIdentifier: 
+  name: Orange Eggs
+  image: {fileID: 21300000, guid: 4c157ce6849389449862862595984873, type: 3}
+  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
+  movementSpeed: 0
+  attackPower: 5
+  attackSpeed: 3
+  defense: 1
+  health: 15
+  hitpoints: 15
+  dodge: 0
+  specialCooldownLength: 0

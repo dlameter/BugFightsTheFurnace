@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Mantis
   m_EditorClassIdentifier: 
   name: 
-  image: {fileID: 0}
+  image: {fileID: 1150626330401856288, guid: 04316296d6ef54335a6d5a618ded094c, type: 3}
+  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
   movementSpeed: 0
   attackPower: 0
   attackSpeed: 0
   defense: 0
   health: 0
+  hitpoints: 0
   dodge: 0
   specialCooldownLength: 0
