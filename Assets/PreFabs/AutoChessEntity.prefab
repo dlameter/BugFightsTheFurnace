@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f3289e7b322b649a1992b396695c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bugStats: {fileID: 11400000, guid: 567d32a2386105c4aadd4b154b9c90d8, type: 2}
+  bugStats: {fileID: 11400000, guid: 262e9cb219ce6ab4891912e527a5b22c, type: 2}
   bugRenderer: {fileID: 8683343065029930111}
   gotoClosest: {fileID: 26846391785394394}
   enemy: 0

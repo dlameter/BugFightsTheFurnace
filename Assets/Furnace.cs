@@ -17,14 +17,12 @@ public class Furnace : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BugStats[] recipe = new BugStats[2];
-        recipe[0] = bugList[0];
-        recipe[1] = bugList[1];
-        recipes.Add(bugList[2], recipe);
+        BugStats[] recipe;
 
+        // Big Mosquito
         recipe = new BugStats[2];
-        recipe[0] = bugList[1];
-        recipe[1] = bugList[2];
+        recipe[0] = bugList[0];
+        recipe[1] = bugList[0];
         recipes.Add(bugList[1], recipe);
     }
 
