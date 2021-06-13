@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
+  m_Name: OrangeMosquito
+  m_EditorClassIdentifier: 
+  name: 
+  image: {fileID: -9128071562316133079, guid: e3722a2becd676346aa53469468306a1, type: 3}
+  bugPrefab: {fileID: 5692508453216053751, guid: 9e2db2a9da0a6db4a8790050692b94ae, type: 3}
+  movementSpeed: 200
+  attackPower: 3
+  attackSpeed: 2
+  defense: 1
+  health: 10
+  hitpoints: 10
+  dodge: 40
+  specialCooldownLength: 0

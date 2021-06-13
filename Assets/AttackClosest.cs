@@ -40,7 +40,6 @@ public class AttackClosest : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D other){
-        Debug.Log("STAY BOY" + other.name + " from " + this.name + " other stats movement " /*+ otherStats.bugStats.movementSpeed*/);
         AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
         if (otherBug != null && otherBug.enemy != bug.enemy)
         {
