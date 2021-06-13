@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black Maggot
   m_EditorClassIdentifier: 
   name: Maggot
-  image: {fileID: 21300000, guid: cff550b9b0fbbbe4ba773ee25408f965, type: 3}
+  image: {fileID: 0}
   bugPrefab: {fileID: 0}
   movementSpeed: 0
   attackPower: 0

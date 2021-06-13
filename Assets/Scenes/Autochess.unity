@@ -796,6 +796,10 @@ MonoBehaviour:
   secondSlot: {fileID: 239126192}
   outputSlot: {fileID: 233588088}
   newCardBugStats: {fileID: 11400000, guid: 567d32a2386105c4aadd4b154b9c90d8, type: 2}
+  bugList:
+  - {fileID: 11400000, guid: 567d32a2386105c4aadd4b154b9c90d8, type: 2}
+  - {fileID: 11400000, guid: bdcb18d2e74ac8c4d80b4755cc16bce8, type: 2}
+  - {fileID: 11400000, guid: 50699a08b2e32fc44aebc355358e8b76, type: 2}
 --- !u!1 &501311240
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,11 +947,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -704
+      value: -207
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 91
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3626,11 +3630,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -945
+      value: -401
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 92
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4070,11 +4074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -825
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 87
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 5806519344275591950, guid: 1f258dba388f6d44391c0d7181302435, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
