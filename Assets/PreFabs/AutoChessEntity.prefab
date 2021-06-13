@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2779365023819790423}
   - component: {fileID: 8683343065029930111}
   m_Layer: 0
-  m_Name: Beetle_3
+  m_Name: BugImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
 --- !u!50 &8018980244147492842
 Rigidbody2D:
   serializedVersion: 4
@@ -213,7 +213,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 8e4e812a61e62c24094d588565e1e1d6, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &8568409954703312420
@@ -296,7 +296,7 @@ MonoBehaviour:
   body: {fileID: 8018980244147492842}
   chessEntity: {fileID: 8568409954703312420}
   bugStats: {fileID: 0}
-  stopDistance: 1.2
+  stopDistance: 1.1
   targetingClass: {fileID: 8662408990167814676}
   friend: 0
 --- !u!114 &8662408990167814676

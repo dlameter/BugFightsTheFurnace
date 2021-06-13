@@ -8,23 +8,17 @@ public class AttackClosest : MonoBehaviour
     private float attackTimer;
     private AutoChessEntity lastOtherBug;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         attackTimer -= Time.deltaTime;
 
-        if(attackTimer <= 0){
-            if(lastOtherBug){
-                lastOtherBug.receiveAttack(bug.attack());
-            }
-            attackTimer = bug.bugStats.attackSpeed;
-        }
+        // if(attackTimer <= 0){
+        //     if(lastOtherBug){
+        //         lastOtherBug.receiveAttack(bug.attack());
+        //     }
+        //     attackTimer = bug.bugStats.attackSpeed;
+        // }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -41,17 +35,17 @@ public class AttackClosest : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other){
         AutoChessEntity otherBug = other.GetComponent<AutoChessEntity>();
-        if (otherBug != null && otherBug.enemy != bug.enemy)
+        if (otherBug != null && otherBug.tag == "Bug" && otherBug.enemy != bug.enemy)
         {
             if (attackTimer <= 0) {
                 Debug.Log(other.name + " got hit by " + bug.name);
-                attackTimer = bug.bugStats.attackSpeed * 1000;
+                attackTimer = bug.bugStats.attackSpeed * 1;
                 otherBug.receiveAttack(bug.bugStats.attackPower);
             }
         }
     }
 
     void OnTriggerLeave2d(Collider2D other){
-        bug.bugStats.movementSpeed = 10;
+        // bug.bugStats.movementSpeed = 10;
     }
 }

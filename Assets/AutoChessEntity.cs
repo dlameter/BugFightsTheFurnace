@@ -19,11 +19,11 @@ public class AutoChessEntity : MonoBehaviour
 
     public void receiveAttack(float damage, float special = 0)
     {
-        bool dodgeBool = (Random.Range(bugStats.dodge, 100) >= 90);
+        bool dodgeBool = (Random.Range(0, 100) <= bugStats.dodge);
 
         if (!dodgeBool)
         {
-            Debug.Log("HP = " + hp + " dodged: " + dodgeBool);
+            Debug.Log(bugStats.name + ": HP = " + hp + " dodged: " + dodgeBool);
             hp -= Mathf.Max(damage - bugStats.defense, 1);
         }
 
