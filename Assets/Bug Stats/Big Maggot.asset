@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
   m_Name: Big Maggot
   m_EditorClassIdentifier: 
-  name: Orange Maggot
   image: {fileID: 7378052601573702375, guid: a8e0ba4ae1dbb4b409a7dc13c341bb40, type: 3}
   bugPrefab: {fileID: 1246916366361389033, guid: e463b3643a2f76943bb5326cb5da1104, type: 3}
-  movementSpeed: 0
-  attackPower: 0
-  attackSpeed: 0
+  movementSpeed: 100
+  attackPower: 2
+  attackSpeed: 1
   defense: 0
-  health: 0
-  hitpoints: 0
+  health: 10
+  hitpoints: 10
   dodge: 0
+  range: 6
   specialCooldownLength: 0

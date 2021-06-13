@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
   m_Name: Eggs
   m_EditorClassIdentifier: 
-  name: Eggs
   image: {fileID: 21300000, guid: 2102883295c17471ebdcba2b2dd04980, type: 3}
-  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
+  bugPrefab: {fileID: 6621440253051023591, guid: f60f55db7ca11420a8ccd102ef8077ca, type: 3}
   movementSpeed: 0
   attackPower: 4
   attackSpeed: 2
@@ -22,4 +21,5 @@ MonoBehaviour:
   health: 10
   hitpoints: 10
   dodge: 0
+  range: 5
   specialCooldownLength: 0

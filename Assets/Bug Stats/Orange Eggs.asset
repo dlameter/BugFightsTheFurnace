@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
   m_Name: Orange Eggs
   m_EditorClassIdentifier: 
-  name: Orange Eggs
   image: {fileID: 21300000, guid: 4c157ce6849389449862862595984873, type: 3}
-  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
+  bugPrefab: {fileID: 6621440253051023591, guid: f60f55db7ca11420a8ccd102ef8077ca, type: 3}
   movementSpeed: 0
   attackPower: 5
   attackSpeed: 3
@@ -22,4 +21,5 @@ MonoBehaviour:
   health: 15
   hitpoints: 15
   dodge: 0
+  range: 6
   specialCooldownLength: 0
