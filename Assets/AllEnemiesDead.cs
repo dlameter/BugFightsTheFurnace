@@ -11,7 +11,12 @@ public class AllEnemiesDead : MonoBehaviour
 
     void Start()
     {
-        enemiesLeft = enemies.Count;
+        List<AutoChessEntity> autoChessEntities = new List<AutoChessEntity>(Object.FindObjectsOfType<AutoChessEntity>());
+        autoChessEntities = autoChessEntities.FindAll((entity) => {
+            return entity.enemy == true;
+        });
+
+        enemies = autoChessEntities;
 
         foreach (AutoChessEntity enemy in enemies)
         {
@@ -21,13 +26,10 @@ public class AllEnemiesDead : MonoBehaviour
 
     void DecrementCounter()
     {
-        // enemiesLeft -= 1;
-
         enemies = enemies.FindAll((enemy) => {
             return enemy != null && !enemy.isDead();
         });
 
-        // if (enemiesLeft <= 0)
         if (enemies.Count <= 0)
         {
             onWin.Invoke();
