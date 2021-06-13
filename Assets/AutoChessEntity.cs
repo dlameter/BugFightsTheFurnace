@@ -9,10 +9,12 @@ public class AutoChessEntity : MonoBehaviour
     public SpriteRenderer bugRenderer;
     public GotoClosest gotoClosest;
     public bool enemy;
+    private float hp;
 
     void Start() {
         bugRenderer.sprite = bugStats.image;
         gotoClosest.bugStats = bugStats;
+        hp = bugStats.health;
     }
 
     public void receiveAttack(float damage, float special = 0)
@@ -21,11 +23,11 @@ public class AutoChessEntity : MonoBehaviour
 
         if (!dodgeBool)
         {
-            Debug.Log("HP = " + bugStats.hitpoints + " dodged: " + dodgeBool);
-            bugStats.hitpoints = bugStats.hitpoints + (bugStats.defense - damage);
+            Debug.Log("HP = " + hp + " dodged: " + dodgeBool);
+            hp -= Mathf.Max(damage - bugStats.defense, 1);
         }
 
-        if (bugStats.hitpoints <= 0)
+        if (hp <= 0)
         {
             die();
         }

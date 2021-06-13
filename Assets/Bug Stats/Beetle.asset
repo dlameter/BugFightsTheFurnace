@@ -20,6 +20,6 @@ MonoBehaviour:
   attackSpeed: 1
   defense: 0
   health: 5
-  hitpoints: 0
+  hitpoints: 20
   dodge: 20
   specialCooldownLength: 0
