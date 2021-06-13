@@ -15,11 +15,11 @@ MonoBehaviour:
   name: GreenMosquito
   image: {fileID: 3575568496401750920, guid: 3ff26689f736b4a4384f1ecaa1ac3eb0, type: 3}
   bugPrefab: {fileID: 5692508453216053751, guid: 9e2db2a9da0a6db4a8790050692b94ae, type: 3}
-  movementSpeed: 10
-  attackPower: 2
+  movementSpeed: 50
+  attackPower: 7
   attackSpeed: 1
-  defense: 0
+  defense: 1
   health: 10
   hitpoints: 10
-  dodge: 10
+  dodge: 20
   specialCooldownLength: 0
