@@ -8,6 +8,7 @@ public class AutoChessEntity : MonoBehaviour
     public BugStats bugStats;
     public SpriteRenderer bugRenderer;
     public GotoClosest gotoClosest;
+    public AttackClosest attackClosest;
     public bool enemy;
     private float hp;
 
@@ -15,6 +16,9 @@ public class AutoChessEntity : MonoBehaviour
         bugRenderer.sprite = bugStats.image;
         gotoClosest.bugStats = bugStats;
         hp = bugStats.hitpoints;
+        if (bugStats.range > 0) {
+            attackClosest.GetComponent<CircleCollider2D>().radius = bugStats.range;
+        }
     }
 
     public void receiveAttack(float damage, float special = 0)

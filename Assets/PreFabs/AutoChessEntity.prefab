@@ -231,6 +231,7 @@ MonoBehaviour:
   bugStats: {fileID: 11400000, guid: 262e9cb219ce6ab4891912e527a5b22c, type: 2}
   bugRenderer: {fileID: 8683343065029930111}
   gotoClosest: {fileID: 26846391785394394}
+  attackClosest: {fileID: 6196234376263129904}
   enemy: 0
 --- !u!1 &5705025950255595623
 GameObject:

@@ -15,6 +15,7 @@ public class BugStats : ScriptableObject
     public float health;
     public float hitpoints;
     public float dodge;
+    public float range;
     public float specialCooldownLength;
 
     public new string ToString() {
