@@ -679,6 +679,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9607843
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
 --- !u!1 &487297380
@@ -1046,11 +1058,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3856632871210473883, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -77
+      value: -76
       objectReference: {fileID: 0}
     - target: {fileID: 3856632871210473883, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 432
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 3856632871210473883, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1067,6 +1079,22 @@ PrefabInstance:
     - target: {fileID: 5522410537967782604, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
       propertyPath: m_Name
       value: SecondSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.22236279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20761837
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750614353252220635, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
@@ -3464,7 +3492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3588,6 +3616,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: OutputSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588071517786502963, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2264151
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8684f6cc2511e3347b30d0073c306c4c, type: 3}
 --- !u!224 &1345572922 stripped
@@ -3645,7 +3685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.8784314, g: 0.8784314, b: 0.8784314, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4155,14 +4195,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Merge Bug
+  m_Text: Merge Bugs
 --- !u!222 &2020851566
 CanvasRenderer:
   m_ObjectHideFlags: 0
