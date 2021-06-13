@@ -10,22 +10,57 @@ public class Furnace : MonoBehaviour
     public CardSlot secondSlot;
     public CardSlot outputSlot;
     public BugStats newCardBugStats;
+    public List<BugStats> bugList;
+
+    public Dictionary<BugStats, BugStats[]> recipes = new Dictionary<BugStats, BugStats[]>();
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        BugStats[] recipe = new BugStats[2];
+        recipe[0] = bugList[0];
+        recipe[1] = bugList[1];
+        recipes.Add(bugList[2], recipe);
+
+        recipe = new BugStats[2];
+        recipe[0] = bugList[1];
+        recipe[1] = bugList[2];
+        recipes.Add(bugList[1], recipe);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void MergeBugs() {
-        GameObject newCard = Instantiate(cardPrefab, Vector3.zero, Quaternion.identity, cardParent.transform) as GameObject;
-        newCard.GetComponent<Card>().bugStats = newCardBugStats;
-        outputSlot.SetCardInSlot(outputSlot, newCard.GetComponent<Card>());
+    public void MergeBugs()
+    {
+        if (firstSlot.cardInSlot != null && secondSlot.cardInSlot != null)
+        {
+            foreach (BugStats result in recipes.Keys)
+            {
+                if (TestRecipe(recipes[result]))
+                {
+                    Debug.Log("result " + result);
+                    GameObject newCard = Instantiate(cardPrefab, Vector3.zero, Quaternion.identity, cardParent.transform) as GameObject;
+                    newCard.GetComponent<Card>().bugStats = result;
+                    outputSlot.SetCardInSlot(outputSlot, newCard.GetComponent<Card>());
+                    return;
+                }
+            }
+        }
+    }
+
+    private bool TestRecipe(BugStats[] recipe)
+    {
+        if ((recipe[0] == firstSlot.cardInSlot.bugStats &&
+            recipe[1] == secondSlot.cardInSlot.bugStats) ||
+            (recipe[0] == secondSlot.cardInSlot.bugStats &&
+            recipe[1] == firstSlot.cardInSlot.bugStats))
+        {
+            return true;
+        }
+        return false;
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public UnityEvent onDrop;
+    public UnityEvent OnDragStart;
     private Canvas canvas;
     private CanvasGroup group;
     private RectTransform rectTransform;
@@ -28,6 +29,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegin
     {
         // Debug.Log("OnBeginDrag");
         group.blocksRaycasts = false;
+        OnDragStart.Invoke();
     }
 
     public void OnDrag(PointerEventData eventData)

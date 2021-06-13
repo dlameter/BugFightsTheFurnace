@@ -29,9 +29,17 @@ public class CardSlot : MonoBehaviour, IDropHandler
             {
                 if (cardInSlot)
                 {
-                    onCardRemoved.Invoke(cardInSlot);
-                    SwitchCards(cardInSlot, newCard);
-                    onCardAdded.Invoke(cardInSlot);
+                    if (newCard.GetSlot() == null)
+                    {
+                        Debug.Log("swap positions");
+                        SwapPositions(cardInSlot, newCard);
+                    }
+                    else
+                    {
+                        onCardRemoved.Invoke(cardInSlot);
+                        SwitchCards(cardInSlot, newCard);
+                        onCardAdded.Invoke(cardInSlot);
+                    }
                 }
                 else
                 {
@@ -43,6 +51,12 @@ public class CardSlot : MonoBehaviour, IDropHandler
 
     public void SetCardInSlot(CardSlot slot, Card card)
     {
+        if (card == null)
+        {
+            slot.cardInSlot = null;
+            return;
+        }
+
         CardSlot currentSlot = card.GetSlot();
         if (currentSlot != null && currentSlot.cardInSlot != null && currentSlot.cardInSlot == card)
         {
@@ -61,5 +75,18 @@ public class CardSlot : MonoBehaviour, IDropHandler
     {
         SetCardInSlot(newCard.GetSlot(), oldCard);
         SetCardInSlot(this, newCard);
+    }
+
+    private void SwapPositions(Card inSlotCard, Card outOfSlotCard)
+    {
+        // Add new card to this slot
+        Vector2 prevPos = outOfSlotCard.GetPreviousPosition();
+        SetCardInSlot(this, outOfSlotCard);
+
+        // Move old card to new cards previous position
+        inSlotCard.GetComponent<RectTransform>().anchoredPosition = prevPos;
+
+        // Clear old card's slot
+        inSlotCard.SetSlot(null);
     }
 }

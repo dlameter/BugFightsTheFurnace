@@ -27,6 +27,22 @@ public class Card : MonoBehaviour, IDropHandler
         }
     }
 
+    public void EndDrag()
+    {
+        if (currentSlot != null && currentSlot.cardInSlot != this)
+        {
+            SetSlot(null);
+        }
+    }
+
+    public void ClearSlot()
+    {
+        if (currentSlot != null)
+        {
+            currentSlot.SetCardInSlot(currentSlot, null);
+        }
+    }
+
     public void ReturnToPosition()
     {
         GetComponent<RectTransform>().anchoredPosition = previousPosition;
@@ -55,7 +71,14 @@ public class Card : MonoBehaviour, IDropHandler
     public void SetSlot(CardSlot newSlot)
     {
         currentSlot = newSlot;
-        SetPreviousPosition(newSlot.GetComponent<RectTransform>());
+        if (newSlot != null)
+        {
+            SetPreviousPosition(newSlot.GetComponent<RectTransform>());
+        }
+        else
+        {
+            SetPreviousPosition(GetComponent<RectTransform>());
+        }
     }
 
     public CardSlot GetSlot()
@@ -63,7 +86,13 @@ public class Card : MonoBehaviour, IDropHandler
         return currentSlot;
     }
 
-    private void SetPreviousPosition(RectTransform newPosition) {
+    private void SetPreviousPosition(RectTransform newPosition)
+    {
         previousPosition = newPosition.anchoredPosition;
+    }
+
+    public Vector2 GetPreviousPosition()
+    {
+        return previousPosition;
     }
 }
