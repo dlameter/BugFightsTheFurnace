@@ -14,6 +14,7 @@ public class PlayArea : MonoBehaviour, IDropHandler
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(eventData.position);
             mousePos.z = 0;
             GameObject bug = Instantiate(card.bugStats.bugPrefab, mousePos, Quaternion.identity) as GameObject;
+            bug.GetComponent<AutoChessEntity>().bugStats = card.bugStats;
             Destroy(card.gameObject);
         }
     }
