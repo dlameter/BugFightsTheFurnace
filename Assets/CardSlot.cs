@@ -49,7 +49,13 @@ public class CardSlot : MonoBehaviour, IDropHandler
             currentSlot.cardInSlot = null;
         }
 
-        card.GetComponent<RectTransform>().anchoredPosition = slot.GetComponent<RectTransform>().anchoredPosition;
+        RectTransform cardTransform = card.GetComponent<RectTransform>();
+        RectTransform slotTransform = slot.GetComponent<RectTransform>();
+
+        Debug.Log("cardTransform" + cardTransform.InverseTransformPoint(cardTransform.TransformPoint(cardTransform.localPosition)));
+        Debug.Log("slotTransform" + cardTransform.InverseTransformPoint(slotTransform.TransformPoint(slotTransform.localPosition)));
+
+        cardTransform.localPosition = cardTransform.InverseTransformPoint(slotTransform.TransformPoint(slotTransform.localPosition));
         slot.cardInSlot = card;
         card.SetSlot(slot);
     }
