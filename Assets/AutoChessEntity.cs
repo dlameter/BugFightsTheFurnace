@@ -14,7 +14,7 @@ public class AutoChessEntity : MonoBehaviour
     void Start() {
         bugRenderer.sprite = bugStats.image;
         gotoClosest.bugStats = bugStats;
-        hp = bugStats.health;
+        hp = bugStats.hitpoints;
     }
 
     public void receiveAttack(float damage, float special = 0)

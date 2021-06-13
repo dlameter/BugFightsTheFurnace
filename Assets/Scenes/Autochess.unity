@@ -3612,7 +3612,7 @@ PrefabInstance:
     - target: {fileID: 6547483284525845075, guid: 5b9ac22554eaf63409cdc366ad3acf4f, type: 3}
       propertyPath: bugStats
       value: 
-      objectReference: {fileID: 11400000, guid: 567d32a2386105c4aadd4b154b9c90d8, type: 2}
+      objectReference: {fileID: 11400000, guid: bdcb18d2e74ac8c4d80b4755cc16bce8, type: 2}
     - target: {fileID: 6942497532725339854, guid: 5b9ac22554eaf63409cdc366ad3acf4f, type: 3}
       propertyPath: m_Name
       value: Fred
@@ -3623,11 +3623,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8354440876949821882, guid: 5b9ac22554eaf63409cdc366ad3acf4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.25
+      value: -5.6
       objectReference: {fileID: 0}
     - target: {fileID: 8354440876949821882, guid: 5b9ac22554eaf63409cdc366ad3acf4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.49
+      value: 3.35
       objectReference: {fileID: 0}
     - target: {fileID: 8354440876949821882, guid: 5b9ac22554eaf63409cdc366ad3acf4f, type: 3}
       propertyPath: m_LocalPosition.z
