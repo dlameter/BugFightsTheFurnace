@@ -78,6 +78,24 @@ public class Furnace : MonoBehaviour
         recipe[0] = bugList[2];
         recipe[1] = bugList[6];
         recipes.Add(bugList[13], recipe);
+
+        // Black Egg
+        recipe = new BugStats[2];
+        recipe[0] = bugList[4];
+        recipe[1] = bugList[0];
+        recipes.Add(bugList[14], recipe);
+
+        // Green Egg
+        recipe = new BugStats[2];
+        recipe[0] = bugList[4];
+        recipe[1] = bugList[2];
+        recipes.Add(bugList[15], recipe);
+
+        // Orange Egg
+        recipe = new BugStats[2];
+        recipe[0] = bugList[4];
+        recipe[1] = bugList[6];
+        recipes.Add(bugList[16], recipe);
     }
 
     // Update is called once per frame
