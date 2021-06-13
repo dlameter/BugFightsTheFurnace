@@ -36,7 +36,7 @@ public class Furnace : MonoBehaviour
 
     public void MergeBugs()
     {
-        if (firstSlot.cardInSlot != null && secondSlot.cardInSlot != null)
+        if (firstSlot.cardInSlot != null && secondSlot.cardInSlot != null && outputSlot.cardInSlot == null)
         {
             foreach (BugStats result in recipes.Keys)
             {
