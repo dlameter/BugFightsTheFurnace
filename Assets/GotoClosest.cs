@@ -5,10 +5,10 @@ using UnityEngine;
 public class GotoClosest : MonoBehaviour
 {
     public Rigidbody2D body;
-    public AutoChessEntity autoChessEntity;
     public BugStats bugStats;
     public float stopDistance;
     public TargetingInterface targetingClass;
+    public bool friend;
 
     private HashSet<Collider2D> colliding = new HashSet<Collider2D>();
 
@@ -16,14 +16,9 @@ public class GotoClosest : MonoBehaviour
     {
         if (colliding.Count > 0)
         {
-            Transform closest = targetingClass.targetingFunction(
-                new List<Collider2D>(colliding).FindAll((colliders) =>
-                {
-                    return colliders != null;
-                })
-                .ConvertAll<Transform>(Collider2DToTransform),
-                this.GetComponentInParent<Rigidbody2D>()
-            );
+            Transform closest = targetingClass.targetingFunction(new List<Collider2D>(colliding).FindAll((colliders) => {
+            return colliders!=null;
+        }).ConvertAll<Transform>(Collider2DToTransform), this.GetComponentInParent<Rigidbody2D>());
             MoveTo(closest);
             LookAt(closest);
         }
@@ -31,9 +26,8 @@ public class GotoClosest : MonoBehaviour
 
     void MoveTo(Transform transform)
     {
-        if (!transform || !body)
-        {
-            body.velocity = Vector2.zero;
+        if(!transform || !body){
+            if(body)body.velocity = Vector2.zero;
             return;
         }
         Vector3 position = body.position;
@@ -52,8 +46,7 @@ public class GotoClosest : MonoBehaviour
 
     void LookAt(Transform transform)
     {
-        if (!transform || !body)
-        {
+        if(!transform || !body){
             return;
         }
         float angle = Vector3.SignedAngle(Vector3.up, body.transform.position - transform.position, Vector3.forward);
@@ -67,8 +60,7 @@ public class GotoClosest : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        AutoChessEntity otherChessEntity = other.GetComponent<AutoChessEntity>();
-        if (other.gameObject.tag == "Bug" && otherChessEntity != null && otherChessEntity.enemy != autoChessEntity.enemy) 
+        if (other.gameObject.tag == "Bug")
         {
             this.colliding.Add(other);
         }

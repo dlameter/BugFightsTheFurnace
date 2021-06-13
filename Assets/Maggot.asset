@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Maggy
   image: {fileID: -3713964050822228475, guid: e885615b5e31b48f98abc06d31ce20b2, type: 3}
-  bugPrefab: {fileID: 238569588794205729, guid: 54339985b1a08034aa707508104bfe6b, type: 3}
+  bugPrefab: {fileID: 0}
   movementSpeed: 100
   attackPower: 1
   attackSpeed: 1
   defense: 0
   health: 10
-  hitpoints: 0
+  hitpoints: 12
   dodge: 0
   specialCooldownLength: 0
