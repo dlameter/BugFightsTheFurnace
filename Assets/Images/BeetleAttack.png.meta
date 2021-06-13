@@ -154,10 +154,10 @@ TextureImporter:
       name: BeetleAttack_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 104
-        width: 16
-        height: 16
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: BeetleAttack_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 103
-        width: 16
-        height: 16
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: BeetleAttack_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 101
-        width: 20
-        height: 16
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: BeetleAttack_3
       rect:
         serializedVersion: 2
-        x: 104
+        x: 96
         y: 96
-        width: 16
-        height: 18
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: BeetleAttack_4
       rect:
         serializedVersion: 2
-        x: 136
-        y: 97
-        width: 16
-        height: 20
+        x: 128
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: BeetleAttack_5
       rect:
         serializedVersion: 2
-        x: 168
-        y: 105
-        width: 16
-        height: 16
+        x: 160
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: BeetleAttack_6
       rect:
         serializedVersion: 2
-        x: 8
-        y: 72
-        width: 19
-        height: 14
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: BeetleAttack_7
       rect:
         serializedVersion: 2
-        x: 40
-        y: 73
-        width: 20
-        height: 16
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,10 +322,10 @@ TextureImporter:
       name: BeetleAttack_8
       rect:
         serializedVersion: 2
-        x: 72
-        y: 73
-        width: 22
-        height: 17
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,10 +343,10 @@ TextureImporter:
       name: BeetleAttack_9
       rect:
         serializedVersion: 2
-        x: 107
-        y: 71
-        width: 21
-        height: 17
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,10 +364,10 @@ TextureImporter:
       name: BeetleAttack_10
       rect:
         serializedVersion: 2
-        x: 138
-        y: 71
-        width: 21
-        height: 15
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,10 +385,10 @@ TextureImporter:
       name: BeetleAttack_11
       rect:
         serializedVersion: 2
-        x: 168
-        y: 73
-        width: 20
-        height: 16
+        x: 160
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,10 +406,10 @@ TextureImporter:
       name: BeetleAttack_12
       rect:
         serializedVersion: 2
-        x: 5
-        y: 40
-        width: 19
-        height: 14
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,10 +427,10 @@ TextureImporter:
       name: BeetleAttack_13
       rect:
         serializedVersion: 2
-        x: 36
-        y: 41
-        width: 20
-        height: 16
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,10 +448,10 @@ TextureImporter:
       name: BeetleAttack_14
       rect:
         serializedVersion: 2
-        x: 66
-        y: 41
-        width: 22
-        height: 17
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,9 +470,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 39
-        width: 21
-        height: 17
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,10 +490,10 @@ TextureImporter:
       name: BeetleAttack_16
       rect:
         serializedVersion: 2
-        x: 129
-        y: 39
-        width: 21
-        height: 15
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,10 +511,10 @@ TextureImporter:
       name: BeetleAttack_17
       rect:
         serializedVersion: 2
-        x: 164
-        y: 41
-        width: 20
-        height: 16
+        x: 160
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,10 +532,10 @@ TextureImporter:
       name: BeetleAttack_18
       rect:
         serializedVersion: 2
-        x: 7
-        y: 10
-        width: 18
-        height: 15
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,10 +553,10 @@ TextureImporter:
       name: BeetleAttack_19
       rect:
         serializedVersion: 2
-        x: 38
-        y: 12
-        width: 20
-        height: 16
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -574,10 +574,10 @@ TextureImporter:
       name: BeetleAttack_20
       rect:
         serializedVersion: 2
-        x: 69
-        y: 13
-        width: 22
-        height: 16
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,10 +595,10 @@ TextureImporter:
       name: BeetleAttack_21
       rect:
         serializedVersion: 2
-        x: 102
-        y: 14
-        width: 20
-        height: 17
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,10 +616,10 @@ TextureImporter:
       name: BeetleAttack_22
       rect:
         serializedVersion: 2
-        x: 135
-        y: 12
-        width: 18
-        height: 18
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -637,10 +637,10 @@ TextureImporter:
       name: BeetleAttack_23
       rect:
         serializedVersion: 2
-        x: 166
-        y: 12
-        width: 20
-        height: 17
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

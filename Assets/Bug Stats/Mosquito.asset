@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mosquito
   m_EditorClassIdentifier: 
   name: Mosquito
-  image: {fileID: 2631103260818236658, guid: b92f00e6982c04d2db3770594c821fb4, type: 3}
+  image: {fileID: 2631103260818236658, guid: d263a36edc3a30e40b188636620e35b7, type: 3}
   bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
   movementSpeed: 100
   attackPower: 2

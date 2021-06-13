@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
   m_Name: Big Mantis
   m_EditorClassIdentifier: 
-  name: 
-  image: {fileID: 0}
-  bugPrefab: {fileID: 0}
-  movementSpeed: 0
-  attackPower: 0
-  attackSpeed: 0
+  name: Big Mantis
+  image: {fileID: -7227660872210392997, guid: 07bbe7540c1a0f145bc03f60b826358c, type: 3}
+  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
+  movementSpeed: 10
+  attackPower: 8
+  attackSpeed: 0.5
   defense: 0
   health: 0
-  hitpoints: 0
+  hitpoints: 20
   dodge: 0
   specialCooldownLength: 0

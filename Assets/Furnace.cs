@@ -24,6 +24,12 @@ public class Furnace : MonoBehaviour
         recipe[0] = bugList[0];
         recipe[1] = bugList[0];
         recipes.Add(bugList[1], recipe);
+
+        // Big Mantis
+        recipe = new BugStats[2];
+        recipe[0] = bugList[2];
+        recipe[1] = bugList[2];
+        recipes.Add(bugList[3], recipe);
     }
 
     // Update is called once per frame
