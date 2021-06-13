@@ -26,7 +26,7 @@ RectTransform:
   m_GameObject: {fileID: 5522410537967782604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 7750614353252220635}
   m_Father: {fileID: 0}
@@ -49,6 +49,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cedf14449ddfea41838bd1e92b57f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardInSlot: {fileID: 0}
+  onCardAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  onCardRemoved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7868421332764651267
 GameObject:
   m_ObjectHideFlags: 0
