@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Bug", menuName = "Bug")]
 public class BugStats : ScriptableObject
 {
-    public new string name;
     public Sprite image;
 
     public GameObject bugPrefab;

@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
   m_Name: Orange Mantis
   m_EditorClassIdentifier: 
-  name: Orange Mosquito
-  image: {fileID: -9128071562316133079, guid: e3722a2becd676346aa53469468306a1, type: 3}
+  image: {fileID: 3845436850499006383, guid: 969249b6e03644b459484eee2648fdcc, type: 3}
   bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
   movementSpeed: 0
   attackPower: 0

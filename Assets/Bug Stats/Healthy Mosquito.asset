@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
-  m_Name: HealthyMosquito
+  m_Name: Healthy Mosquito
   m_EditorClassIdentifier: 
   name: HealthyMosquito
   image: {fileID: -1015279654678526785, guid: 9f61e9b375a3f6b49b31d6cb6faec70a, type: 3}

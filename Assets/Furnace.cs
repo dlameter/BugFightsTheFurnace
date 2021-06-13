@@ -60,6 +60,24 @@ public class Furnace : MonoBehaviour
         recipe[0] = bugList[0];
         recipe[1] = bugList[6];
         recipes.Add(bugList[10], recipe);
+
+        // Black Mantis
+        recipe = new BugStats[2];
+        recipe[0] = bugList[2];
+        recipe[1] = bugList[0];
+        recipes.Add(bugList[11], recipe);
+
+        // Healthy Mantis
+        recipe = new BugStats[2];
+        recipe[0] = bugList[2];
+        recipe[1] = bugList[4];
+        recipes.Add(bugList[12], recipe);
+
+        // Orange Mantis
+        recipe = new BugStats[2];
+        recipe[0] = bugList[2];
+        recipe[1] = bugList[6];
+        recipes.Add(bugList[13], recipe);
     }
 
     // Update is called once per frame
@@ -91,10 +109,12 @@ public class Furnace : MonoBehaviour
 
     private bool TestRecipe(BugStats[] recipe)
     {
-        if ((recipe[0] == firstSlot.cardInSlot.bugStats &&
-            recipe[1] == secondSlot.cardInSlot.bugStats) ||
-            (recipe[0] == secondSlot.cardInSlot.bugStats &&
-            recipe[1] == firstSlot.cardInSlot.bugStats))
+        if (
+            (recipe[0] == firstSlot.cardInSlot.bugStats &&
+            recipe[1] == secondSlot.cardInSlot.bugStats) // ||
+            // (recipe[0] == secondSlot.cardInSlot.bugStats &&
+            // recipe[1] == firstSlot.cardInSlot.bugStats)
+            )
         {
             return true;
         }

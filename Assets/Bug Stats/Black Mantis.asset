@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dada10988480bde42885365aa6a491f9, type: 3}
   m_Name: Black Mantis
   m_EditorClassIdentifier: 
-  name: 
-  image: {fileID: 0}
-  bugPrefab: {fileID: 0}
+  name: Black Mantis
+  image: {fileID: 1910778176503393073, guid: c7be2437272e52b45bb2a68c9dd6d350, type: 3}
+  bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
   movementSpeed: 0
   attackPower: 0
   attackSpeed: 0
