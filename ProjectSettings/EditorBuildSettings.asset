@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Overland.unity
     guid: 2f00e8920631ca741aa15ecdfa6f7942
   - enabled: 1
-    path: Assets/Scenes/Autochess.unity
-    guid: d549924b37c8a4b4fac663400fba59c6
+    path: Assets/Scenes/Level1.unity
+    guid: 7d1d9251024992a428de78de30940062
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 801f357b9607dbb43ae06634ca1bd761
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 58cc847402c17254a9d39de6c4fc5ef2
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 3a18d92061f1b654ab549e558af32b15
   m_configObjects: {}
