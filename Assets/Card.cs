@@ -9,12 +9,24 @@ public class Card : MonoBehaviour, IDropHandler
     public BugStats bugStats;
     public Image image;
     public Text bugName;
+    public Text range;
+    public Text maxHealth;
+    public Text attack;
+    public Text attackSpeed;
+    public Text defense;
+    public Text dodge;
     private Vector2 previousPosition;
     private CardSlot currentSlot;
 
     void Start()
     {
         bugName.text = bugStats.name;
+        range.text = "" + bugStats.range;
+        maxHealth.text = "" + bugStats.hitpoints;
+        attack.text = "" + bugStats.attackPower;
+        attackSpeed.text = "" + 1 / bugStats.attackSpeed;
+        defense.text = "" + bugStats.defense;
+        dodge.text = bugStats.dodge + "%";
         image.sprite = bugStats.image;
         SetPreviousPosition(GetComponent<RectTransform>());
     }
