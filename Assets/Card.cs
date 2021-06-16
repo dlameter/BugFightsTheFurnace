@@ -24,9 +24,9 @@ public class Card : MonoBehaviour, IDropHandler
         range.text = "" + bugStats.range;
         maxHealth.text = "" + bugStats.hitpoints;
         attack.text = "" + bugStats.attackPower;
-        attackSpeed.text = "" + 1 / bugStats.attackSpeed;
+        attackSpeed.text = string.Format("{0:0.00}", 1 / bugStats.attackSpeed);
         defense.text = "" + bugStats.defense;
-        dodge.text = bugStats.dodge + "%";
+        dodge.text = string.Format("{0}%", bugStats.dodge);
         image.sprite = bugStats.image;
         SetPreviousPosition(GetComponent<RectTransform>());
     }
