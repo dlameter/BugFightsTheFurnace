@@ -1244,28 +1244,7 @@ MonoBehaviour:
   firstSlot: {fileID: 1804844252}
   secondSlot: {fileID: 239126192}
   outputSlot: {fileID: 233588088}
-  newCardBugStats: {fileID: 11400000, guid: 567d32a2386105c4aadd4b154b9c90d8, type: 2}
-  bugList:
-  - {fileID: 11400000, guid: 262e9cb219ce6ab4891912e527a5b22c, type: 2}
-  - {fileID: 11400000, guid: ebc6e618d5312da409bb39849f6b4043, type: 2}
-  - {fileID: 11400000, guid: 74e96ca5f0b794992b62f2be48c7f387, type: 2}
-  - {fileID: 11400000, guid: 9f0f8a4ae888a627ea6a779007f0d6bf, type: 2}
-  - {fileID: 11400000, guid: 6b69567013b0f4fd78aa62115a6d0067, type: 2}
-  - {fileID: 11400000, guid: 3479597200dff703fb5b106062272af4, type: 2}
-  - {fileID: 11400000, guid: 50699a08b2e32fc44aebc355358e8b76, type: 2}
-  - {fileID: 11400000, guid: a55c0d4322c73442aae478b7574584b6, type: 2}
-  - {fileID: 11400000, guid: de647d30b67b7af4280f8a28f0ca2b40, type: 2}
-  - {fileID: 11400000, guid: 424b8f139f196a3448a0634f14e2dd91, type: 2}
-  - {fileID: 11400000, guid: 50c71bd2729509e439ec2b59ea09b0ec, type: 2}
-  - {fileID: 11400000, guid: a88cd5a677f6d3947b70c1ab30351135, type: 2}
-  - {fileID: 11400000, guid: 85ae52f044acbc864b17908cc3d95c33, type: 2}
-  - {fileID: 11400000, guid: 508e3f8133d431354b32be9a19e6a608, type: 2}
-  - {fileID: 11400000, guid: 0c2fc08b754f559a2afa74fd3928a656, type: 2}
-  - {fileID: 11400000, guid: 26b38b95afe267b8a97bf49f95ea2405, type: 2}
-  - {fileID: 11400000, guid: f1130f022a1b9e755890c0de9104625f, type: 2}
-  - {fileID: 11400000, guid: df00bc512a79ad540a46ee4f3319c8fc, type: 2}
-  - {fileID: 11400000, guid: afcf06728b183905a9f9d2ce24edc2f4, type: 2}
-  - {fileID: 11400000, guid: 498de974c72d39ef198f6ce706de0342, type: 2}
+  recipeBook: {fileID: 11400000, guid: c73126cff9e167c4eb07ee32c97cc347, type: 2}
 --- !u!1 &501311240
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,6 @@ public class Furnace : MonoBehaviour
     public CardSlot firstSlot;
     public CardSlot secondSlot;
     public CardSlot outputSlot;
-    public BugStats newCardBugStats;
     public BugRecipeBook recipeBook;
 
     public void MergeBugs()
