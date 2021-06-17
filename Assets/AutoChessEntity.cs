@@ -40,7 +40,6 @@ public class AutoChessEntity : MonoBehaviour
 
             if (hp <= 0)
             {
-                Debug.Log("help???????");
                 animator.SetTrigger("die");
                 dying();
             }

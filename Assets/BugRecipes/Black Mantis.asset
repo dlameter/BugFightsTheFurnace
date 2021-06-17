@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca426b271ab2812438d5cdb45dd6ff19, type: 3}
+  m_Name: Black Mantis
+  m_EditorClassIdentifier: 
+  baseBug: {fileID: 11400000, guid: 74e96ca5f0b794992b62f2be48c7f387, type: 2}
+  additiveBug: {fileID: 11400000, guid: 262e9cb219ce6ab4891912e527a5b22c, type: 2}
+  resultingBug: {fileID: 11400000, guid: a88cd5a677f6d3947b70c1ab30351135, type: 2}

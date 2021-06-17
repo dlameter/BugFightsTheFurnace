@@ -10,129 +10,19 @@ public class Furnace : MonoBehaviour
     public CardSlot secondSlot;
     public CardSlot outputSlot;
     public BugStats newCardBugStats;
-    public List<BugStats> bugList;
-
-    public Dictionary<BugStats, BugStats[]> recipes = new Dictionary<BugStats, BugStats[]>();
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        BugStats[] recipe;
-
-        // Big Mosquito
-        recipe = new BugStats[2];
-        recipe[0] = bugList[0];
-        recipe[1] = bugList[0];
-        recipes.Add(bugList[1], recipe);
-
-        // Big Mantis
-        recipe = new BugStats[2];
-        recipe[0] = bugList[2];
-        recipe[1] = bugList[2];
-        recipes.Add(bugList[3], recipe);
-
-        // Big Egg
-        recipe = new BugStats[2];
-        recipe[0] = bugList[4];
-        recipe[1] = bugList[4];
-        recipes.Add(bugList[5], recipe);
-
-        // Big Maggot
-        recipe = new BugStats[2];
-        recipe[0] = bugList[6];
-        recipe[1] = bugList[6];
-        recipes.Add(bugList[7], recipe);
-
-        // Green Mosquito
-        recipe = new BugStats[2];
-        recipe[0] = bugList[0];
-        recipe[1] = bugList[2];
-        recipes.Add(bugList[8], recipe);
-
-        // Healthy Mosquito
-        recipe = new BugStats[2];
-        recipe[0] = bugList[0];
-        recipe[1] = bugList[4];
-        recipes.Add(bugList[9], recipe);
-
-        // Orange Mosquito
-        recipe = new BugStats[2];
-        recipe[0] = bugList[0];
-        recipe[1] = bugList[6];
-        recipes.Add(bugList[10], recipe);
-
-        // Black Mantis
-        recipe = new BugStats[2];
-        recipe[0] = bugList[2];
-        recipe[1] = bugList[0];
-        recipes.Add(bugList[11], recipe);
-
-        // Healthy Mantis
-        recipe = new BugStats[2];
-        recipe[0] = bugList[2];
-        recipe[1] = bugList[4];
-        recipes.Add(bugList[12], recipe);
-
-        // Orange Mantis
-        recipe = new BugStats[2];
-        recipe[0] = bugList[2];
-        recipe[1] = bugList[6];
-        recipes.Add(bugList[13], recipe);
-
-        // Black Egg
-        recipe = new BugStats[2];
-        recipe[0] = bugList[4];
-        recipe[1] = bugList[0];
-        recipes.Add(bugList[14], recipe);
-
-        // Green Egg
-        recipe = new BugStats[2];
-        recipe[0] = bugList[4];
-        recipe[1] = bugList[2];
-        recipes.Add(bugList[15], recipe);
-
-        // Orange Egg
-        recipe = new BugStats[2];
-        recipe[0] = bugList[4];
-        recipe[1] = bugList[6];
-        recipes.Add(bugList[16], recipe);
-
-        // Black Maggot
-        recipe = new BugStats[2];
-        recipe[0] = bugList[6];
-        recipe[1] = bugList[0];
-        recipes.Add(bugList[17], recipe);
-
-        // Green Maggot
-        recipe = new BugStats[2];
-        recipe[0] = bugList[6];
-        recipe[1] = bugList[2];
-        recipes.Add(bugList[18], recipe);
-
-        // Healthy Maggot
-        recipe = new BugStats[2];
-        recipe[0] = bugList[6];
-        recipe[1] = bugList[4];
-        recipes.Add(bugList[19], recipe);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public BugRecipeBook recipeBook;
 
     public void MergeBugs()
     {
         if (firstSlot.cardInSlot != null && secondSlot.cardInSlot != null && outputSlot.cardInSlot == null)
         {
-            foreach (BugStats result in recipes.Keys)
+            foreach (BugRecipe recipe in recipeBook.recipes)
             {
-                if (TestRecipe(recipes[result]))
+                if (TestRecipe(recipe))
                 {
-                    Debug.Log("result " + result);
+                    Debug.Log("result " + recipe.resultingBug);
                     GameObject newCard = Instantiate(cardPrefab, Vector3.zero, Quaternion.identity, cardParent.transform) as GameObject;
-                    newCard.GetComponent<Card>().bugStats = result;
+                    newCard.GetComponent<Card>().bugStats = recipe.resultingBug;
                     outputSlot.SetCardInSlot(outputSlot, newCard.GetComponent<Card>());
 
                     firstSlot.DestoryCard();
@@ -143,11 +33,11 @@ public class Furnace : MonoBehaviour
         }
     }
 
-    private bool TestRecipe(BugStats[] recipe)
+    private bool TestRecipe(BugRecipe recipe)
     {
         if (
-            (recipe[0] == firstSlot.cardInSlot.bugStats &&
-            recipe[1] == secondSlot.cardInSlot.bugStats) // ||
+            (recipe.baseBug == firstSlot.cardInSlot.bugStats &&
+            recipe.additiveBug == secondSlot.cardInSlot.bugStats) // ||
             // (recipe[0] == secondSlot.cardInSlot.bugStats &&
             // recipe[1] == firstSlot.cardInSlot.bugStats)
             )

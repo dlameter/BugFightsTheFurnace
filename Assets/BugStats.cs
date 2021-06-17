@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Bug", menuName = "Bug")]
+[CreateAssetMenu(fileName = "New Bug", menuName = "Bug/Bug Stats")]
 public class BugStats : ScriptableObject
 {
     public Sprite image;

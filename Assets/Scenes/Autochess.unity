@@ -1321,6 +1321,7 @@ MonoBehaviour:
   secondSlot: {fileID: 239126192}
   outputSlot: {fileID: 233588088}
   newCardBugStats: {fileID: 11400000, guid: 567d32a2386105c4aadd4b154b9c90d8, type: 2}
+  recipeBook: {fileID: 11400000, guid: c73126cff9e167c4eb07ee32c97cc347, type: 2}
   bugList:
   - {fileID: 11400000, guid: 262e9cb219ce6ab4891912e527a5b22c, type: 2}
   - {fileID: 11400000, guid: ebc6e618d5312da409bb39849f6b4043, type: 2}
