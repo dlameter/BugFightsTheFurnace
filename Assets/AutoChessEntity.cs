@@ -37,7 +37,8 @@ public class AutoChessEntity : MonoBehaviour
 
         if (hp <= 0)
         {
-            die();
+            GetComponent<Animator>().SetTrigger("die");
+            dying();
         }
     }
 
@@ -48,11 +49,18 @@ public class AutoChessEntity : MonoBehaviour
         return damage;
     }
 
+    public void dying() {
+        Destroy(gotoClosest);
+        Destroy(attackClosest);
+    }
+
     public void die()
     {
-        Debug.Log("Dead: " + name);
-        onDead.Invoke();
         Destroy(this.gameObject);
+    }
+
+    void OnDestroy() {
+        onDead.Invoke();
     }
 
     public bool isDead() {
