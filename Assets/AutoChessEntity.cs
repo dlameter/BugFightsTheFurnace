@@ -15,30 +15,35 @@ public class AutoChessEntity : MonoBehaviour
 
     public UnityEvent onDead;
 
-    void Start() {
+    void Start()
+    {
         bugRenderer.sprite = bugStats.image;
         gotoClosest.bugStats = bugStats;
         hp = bugStats.hitpoints;
-        if (bugStats.range > 0) {
+        if (bugStats.range > 0)
+        {
             attackClosest.GetComponent<CircleCollider2D>().radius = bugStats.range;
         }
     }
 
     public void receiveAttack(float damage, float special = 0)
     {
+        Animator animator = GetComponent<Animator>();
+
         bool dodgeBool = (Random.Range(0, 100) <= bugStats.dodge);
 
         if (!dodgeBool)
         {
             Debug.Log(bugStats.name + ": HP = " + hp + " dodged: " + dodgeBool);
             hp -= Mathf.Max(damage - bugStats.defense, 1);
-            GetComponent<Animator>().SetTrigger("hit");
-        }
+            animator.SetTrigger("hit");
 
-        if (hp <= 0)
-        {
-            GetComponent<Animator>().SetTrigger("die");
-            dying();
+            if (hp <= 0)
+            {
+                Debug.Log("help???????");
+                animator.SetTrigger("die");
+                dying();
+            }
         }
     }
 
@@ -49,7 +54,8 @@ public class AutoChessEntity : MonoBehaviour
         return damage;
     }
 
-    public void dying() {
+    public void dying()
+    {
         Destroy(gotoClosest);
         Destroy(attackClosest);
     }
@@ -59,11 +65,13 @@ public class AutoChessEntity : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    void OnDestroy() {
+    void OnDestroy()
+    {
         onDead.Invoke();
     }
 
-    public bool isDead() {
+    public bool isDead()
+    {
         return hp <= 0;
     }
 
