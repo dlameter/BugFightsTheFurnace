@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 4535307058645299256}
   - component: {fileID: 8018980244147492842}
   - component: {fileID: 8568409954703312420}
+  - component: {fileID: 5325470472776708719}
   m_Layer: 7
   m_Name: AutoChessEntity
   m_TagString: Bug
@@ -233,6 +234,28 @@ MonoBehaviour:
   gotoClosest: {fileID: 26846391785394394}
   attackClosest: {fileID: 6196234376263129904}
   enemy: 0
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!95 &5325470472776708719
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507051969587784377}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7812e3a981791fd49a2497ad516a866b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5705025950255595623
 GameObject:
   m_ObjectHideFlags: 0

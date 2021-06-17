@@ -32,6 +32,7 @@ public class AutoChessEntity : MonoBehaviour
         {
             Debug.Log(bugStats.name + ": HP = " + hp + " dodged: " + dodgeBool);
             hp -= Mathf.Max(damage - bugStats.defense, 1);
+            GetComponent<Animator>().SetTrigger("hit");
         }
 
         if (hp <= 0)
