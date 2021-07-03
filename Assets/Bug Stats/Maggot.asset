@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: -3713964050822228475, guid: e885615b5e31b48f98abc06d31ce20b2, type: 3}
   bugPrefab: {fileID: 5507051969587784377, guid: 677082190cb41284d93be3752fdc5bb4, type: 3}
-  movementSpeed: 100
   attackPower: 1
   attackSpeed: 1
-  defense: 0
-  health: 10
-  hitpoints: 12
-  dodge: 0
+  movementSpeed: 100
   range: 5
+  hitpoints: 12
+  defense: 0
+  dodge: 0
   specialCooldownLength: 0
