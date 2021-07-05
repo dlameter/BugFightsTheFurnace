@@ -10,6 +10,7 @@ public class AutoChessEntity : MonoBehaviour
     public SpriteRenderer bugRenderer;
     public GotoClosest gotoClosest;
     public AttackClosest attackClosest;
+    public AudioSource bugHit;
     public bool enemy;
     private float hp;
 
@@ -37,6 +38,8 @@ public class AutoChessEntity : MonoBehaviour
             Debug.Log(bugStats.name + ": HP = " + hp + " dodged: " + dodgeBool);
             hp -= Mathf.Max(damage - bugStats.defense, 1);
             animator.SetTrigger("hit");
+
+            bugHit.Play();
 
             if (hp <= 0)
             {
