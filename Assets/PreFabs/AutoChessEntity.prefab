@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bug: {fileID: 8568409954703312420}
+  attackPrefab: {fileID: 1474685090370982308, guid: 77b93cbd2068ddc49983919b0b834068, type: 3}
 --- !u!1 &5507051969587784377
 GameObject:
   m_ObjectHideFlags: 0

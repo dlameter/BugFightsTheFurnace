@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackClosest : MonoBehaviour
 {
     public AutoChessEntity bug;
+    public GameObject attackPrefab;
     private float attackTimer;
     private AutoChessEntity lastOtherBug;
 
@@ -41,7 +42,20 @@ public class AttackClosest : MonoBehaviour
             if (attackTimer <= 0) {
                 Debug.Log(other.name + " got hit by " + bug.name);
                 attackTimer = 1.0f / bug.bugStats.attackSpeed;
-                otherBug.receiveAttack(bug.bugStats.attackPower);
+
+                if (attackPrefab) {
+                    GameObject attackObject = Instantiate(attackPrefab, Vector3.zero, Quaternion.identity);
+                    EggAttackEffect attackEffect = attackObject.GetComponent<EggAttackEffect>();
+                    attackEffect.from = this.gameObject;
+                    attackEffect.to = other.gameObject;
+
+                    attackEffect.onHit.AddListener(() => {
+                        otherBug.receiveAttack(bug.bugStats.attackPower);
+                    });
+                }
+                else {
+                    otherBug.receiveAttack(bug.bugStats.attackPower);
+                }
             }
         }
     }
